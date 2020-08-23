@@ -25,7 +25,7 @@ if (!(isset($_SESSION))){
       <div class="row h-100 ">
 
         <div class="col-lg-5  align-self-center">
-          <img src="../css/bigsearch.png" alt="" class ="bigsearch">
+          <img src="../../css/bigsearch.png" alt="" class ="bigsearch">
         </div>
 
         <div class="col-lg-3 align-self-center">
@@ -40,7 +40,7 @@ if (!(isset($_SESSION))){
 
         <div class="col-lg-4 align-self-center ">
               <button type="submit" name = 'submit' class ="roundsearchbtn">
-                <img src="../css/search.png" alt="" class="searchicon"></button>
+                <img src="../../css/search.png" alt="" class="searchicon"></button>
               </div>
       </div>
     </div>

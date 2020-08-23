@@ -1,7 +1,7 @@
 <?php
 include_once '../HeaderAndFooter/header.php';
 include_once '../../models/DatabaseConnection/Database.php';
-include '../../cache.php';
+include '../home/cache.php';
   if (!(isset($_SESSION))){
   session_start();
   }
@@ -12,8 +12,8 @@ include '../../cache.php';
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel = "stylesheet" href = "../../bootstrap/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel = "stylesheet" href = "../../css/styles.css">
+    <link rel = "stylesheet" href = "../../../bootstrap/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel = "stylesheet" href = "../../../css/styles.css">
     <title></title>
   </head>
   <body class ="mainbody">
@@ -31,14 +31,14 @@ include '../../cache.php';
         $results =  $medical->retrieveAllData("dischargedPatients");
           while($row = mysqli_fetch_array($results)){
             $regNo = $row['RegNo'];
-            echo 
+            echo
             "
             <form method=\"post\" action=\"AlreadyDischargedPatient.php\">
-              <tr>  
+              <tr>
               <td style=\"text-align:center\">  <input type=\"text\" style=\"text-align:center\" class=\"form-control\" name=\"regNo\" value=$regNo readonly>  </td>
               <td style=\"text-align:center\">  <input type=\"submit\" name=\"action\" value=\"View Patient File\"/>  </td>
               </tr>
-             
+
             </form>
             <br>
             "
