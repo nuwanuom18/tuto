@@ -1,0 +1,42 @@
+{
+  "Guest" :{
+    "denied" : {},
+    "Home" : ["*"],
+    "Register" : ["login"],
+    "Restricted" : ["*"]
+
+  },
+
+  "LoggedIn" :{
+    "denied" : {
+      "Register" : ["login"]
+
+    },
+    "Home" : ["*"],
+    "Register" : ["logout"],
+    "Restricted" : ["*"],
+    "Redirect" : ["*"]
+  },
+
+  "Doctor" :{
+    "denied" : {
+      "Register" : ["login", "register"]
+    },
+    "Register" : ["logout"],
+    "Tools" : ["AddNewPatient","Update","existingPatient"]
+},
+
+"Admin" :{
+  "denied" : {},
+  "Register" : ["register"],
+  "Tools" : ["delete"]
+
+},
+
+"Lab Assistant" :{
+  "denied" : {},
+  "Tools" : ["first", "inbox"]
+
+}
+
+}
