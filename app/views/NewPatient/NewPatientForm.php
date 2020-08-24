@@ -1,8 +1,8 @@
 <?php
-include '../HeaderAndFooter/header.php';
-include '../../models/DatabaseConnection/Database.php';
-include '../../classes/Patient.php';
-//include '../../cache.php';
+include 'app/views/HeaderAndFooter/header.php';
+//include 'app/models/DatabaseConnection/Database.php';
+//include 'app/classes/Patient.php';
+include 'app/views/home/cache.php';
 if (!(isset($_SESSION))){
   session_start();
 }
@@ -14,8 +14,9 @@ if (!(isset($_SESSION))){
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel = "stylesheet" href = "../../../bootstrap/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel = "stylesheet" href = "../../../css/styles.css">
+    
+    <link rel = "stylesheet" href = "bootstrap/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel = "stylesheet" href = "css/styles.css">
     <title> </title>
   </head>
 
@@ -23,8 +24,8 @@ if (!(isset($_SESSION))){
 
   <div class="container">
   <?php
-          $medical = Database::getInstance();
-          $records = $medical->getLastRecord('patients');
+        $medical1 = Database::getInstance();
+          $records = $medical1->getLastRecord('patients');
           if (mysqli_num_rows($records)!=0) {
             while($row = mysqli_fetch_array($records)){
               $lastRegNo = $row["RegNo"];
@@ -32,9 +33,9 @@ if (!(isset($_SESSION))){
               echo '<br>';
             }
           }
-
+// action="../../controllers/NewPatient.php"
         ?>
-    <form action ="../../controllers/PatientForms/NewPatient.php" method = "post">
+    <form action="<?=PROOT?>NewPatient/NewPatientForm" method = "post">
 
         <div class="form-row">
 

@@ -4,6 +4,7 @@
   include '../../models/Validation.php';
   include '../../classes/Patient.php';
   include '../../classes/Test.php';
+  include '../../../core/View.php';
   include '../../views/home/cache.php';
 
   if (!(isset($_SESSION))){
@@ -143,7 +144,9 @@ if (isset($_POST['diagnosis'])) {
           //$medical->enterData($test, array('patient_id','sdate'), array($regNo, date('Y-m-d')));
       }
     }
-    header("Location: ../../contents.php");
+  header("Location: ../../views/home/contents.php");
+   //$this->view->render('home/index');
+  
 
       }
 

@@ -18,9 +18,31 @@ class Home extends Controller
 
       if(currentUser()->acl == 'Doctor'){
 
-          if($_POST){
-            dnd($_POST);
-          }
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+          // Something posted
+      
+          if (isset($_POST['create'])) {
+           // $this->view->render('NewPatient/NewPatientForm');
+           Router::redirect('NewPatient/NewPatientForm');
+
+        } else if(isset($_POST['update'])){
+         // $this->view->render('Search/Searching');
+         Router::redirect('Search/Searching');
+        }
+        else if(isset($_POST['filter'])){
+          //$this->view->render('Filtering/FilterBar');
+          Router::redirect('Filtering/FilterBar');
+
+        }
+        else if(isset($_POST['view'])){
+         // $this->view->render('DischargedPatient/Intermediate');
+          Router::redirect('DischargedPatient/Intermediate');
+
+        }
+            
+        
+      }
+           // header("Location: ../tuto/app/views/home/contents.php");
         $this->view->render('home/contents');
 
       }

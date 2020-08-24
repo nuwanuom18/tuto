@@ -1,9 +1,10 @@
 <?php
 
-include './app/models/DatabaseConnection/Database.php';
+include 'app/models/DatabaseConnection/Database.php';
 include 'SetUp.php';
 //
-include_once './app/views/HeaderAndFooter/header.php';
+//include_once '../../views/layouts/main_menu.php';
+include_once 'app/views/HeaderAndFooter/header.php';
   if (!(isset($_SESSION))){
   session_start();
   }
@@ -15,7 +16,7 @@ include_once './app/views/HeaderAndFooter/header.php';
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel = "stylesheet" href = "./bootstrap/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel = "stylesheet" href = "app/bootstrap/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <title></title>
   </head>
@@ -35,11 +36,11 @@ include_once './app/views/HeaderAndFooter/header.php';
 
       <div class="row justify-content-center  ">
         <div class="  col-lg-2 col-md-6">
-          <form >
+          <form method="post">
 
 
-          <button type="button" class=" roundbtn" onclick="window.location.href = './app/views/NewPatient/NewPatientForm.php';">
-          <img src="./css/add-user.png" alt="" class="iconsize"></button>
+          <input type="submit" name='create' id='sdf' class=" roundbtn" >
+          <img src="./css/add-user.png" alt="" class="iconsize"></input>
           <div><label class='optionText'  >Create New Patient </label></div>
 
           <!-- <div class = "optionText">Create New Patient</div> -->
@@ -47,16 +48,16 @@ include_once './app/views/HeaderAndFooter/header.php';
           </form>
         </div>
         <div class="col-lg-2 col-md-6">
-          <form >
-          <button type="button" class=" roundbtn" onclick="window.location.href = './app/views/Searching.php';">
+          <form method="post">
+          <input type="submit" name='update' id='sdf' class=" roundbtn" >
           <img src="./css/refresh.png" alt="" class="iconsize"></button>
           <div> <label class='optionText'>Update Existing Patient </label></div>
 
           </form>
         </div>
         <div class="col-lg-2 col-md-6">
-          <form>
-          <button type="button" class=" roundbtn" onclick="window.location.href = './app/views/Filtering/FilterBar.php';">
+          <form method="post">
+          <input type="submit" name='filter' id='sdf' class=" roundbtn" >
           <img src="./css/filter copy.png" alt="" class="iconsize"></button>
           <div><label class='optionText'>Filter Patients</label></div>
 
@@ -64,8 +65,8 @@ include_once './app/views/HeaderAndFooter/header.php';
           </form>
         </div>
         <div class="col-lg-2 col-md-6">
-          <form>
-          <button type="button" class=" roundbtn" onclick="window.location.href = './app/views/DischargedPatient/Intermediate.php';">
+          <form method="post">
+          <input type="submit" name='view' id='sdf' class=" roundbtn" >
           <img src="./css/bed.png" alt="" class="iconsize" ></button>
           <div><label class='optionText'>View Discharged Patients</label></div>
 

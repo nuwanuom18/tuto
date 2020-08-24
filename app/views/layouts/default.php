@@ -10,7 +10,7 @@
 
     <link rel="stylesheet" href="<?=PROOT?>css/bootstrap.min.css" media="screen" title="no title" charset="utf-8">
 
-
+    <link rel = "stylesheet" href = "<?=PROOT?>css/styles.css">
 
 
     <script src="<?=PROOT?>js/jQuery-2.2.4.min.js"></script>

@@ -29,7 +29,7 @@
             $this->contact = $contact;
             $this->current = $state;
             if ($state == "New"){
-                $this->setState(new NewPatient("New Patient"));
+                $this->setState(new NewPatient_("New Patient"));
             }
             else {
                 if ($state == "Existing"){

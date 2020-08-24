@@ -8,7 +8,7 @@ abstract class State
     abstract public function displayUI($patient);
 }
 
-class NewPatient extends State{
+class NewPatient_ extends State{
 
     function __construct($remark){
         $this->remark = $remark;

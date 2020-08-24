@@ -20,8 +20,8 @@ class Router
     /*
     echo $controller . '<br>';
     echo $action . '<br>';
-    dnd($url);
-    */
+    dnd($url);*/
+    
 
     // acl check
     $grantAccess = self::hasAccess($controller_name, $action_name);
@@ -33,6 +33,7 @@ class Router
 
 
     // params
+
     $queryParams = $url;
     $dispatch = new $controller($controller_name, $action);
     //dnd($dispatch);

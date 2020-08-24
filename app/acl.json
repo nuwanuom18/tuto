@@ -23,6 +23,10 @@
       "Register" : ["login", "register"]
     },
     "Register" : ["logout"],
+    "NewPatient" : ["*"],
+    "Home" : ["*"],
+    "Search" : ["*"],
+    "PatientForms":["*"],
     "Tools" : ["AddNewPatient","Update","existingPatient"]
 },
 

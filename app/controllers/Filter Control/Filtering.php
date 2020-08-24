@@ -16,8 +16,8 @@
   <head>
   <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel = "stylesheet" href = "../../bootstrap/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel = "stylesheet" href = "../../css/styles.css">
+    <link rel = "stylesheet" href = "../../../bootstrap/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel = "stylesheet" href = "../../../css/styles.css">
   </head>
   <body class="mainbody">
   <div class = "container">
@@ -38,7 +38,7 @@
     $columns = array('RegNo', 'FullName', 'Age', 'Gender', 'FullAddress', 'DateOfBirth', 'Diagnosis',  'BedNo','ContactNo');
     $results =  $medical->filterDataByDiagnosis( "patients", $columns, $diagnosis);
 
-    if (mysqli_num_rows($results)!=0) { 
+    if (mysqli_num_rows($results)!=0) {
       echo "<table class=\"table table-bordered\" >
       <thead>
         <tr>
@@ -55,7 +55,7 @@
         $name = $row['FullName'];
         $age =  $row['Age'];
         $gender =  $row['Gender'];
-        echo 
+        echo
             "
             <form method=\"post\" action=\"../PatientForms/ExistingTreatmentsFiltered.php\">
             <tr>
@@ -71,7 +71,7 @@
   }
     else{
       echo "<p class =\"textStyle\">Selected diagnosis not available in any patients in the database</p> ";
-    
+
   }
 
 
@@ -83,7 +83,6 @@
         }
 
 </script>
-      
+
   </body>
 </html>
-

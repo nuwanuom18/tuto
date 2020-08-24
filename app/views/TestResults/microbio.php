@@ -13,8 +13,8 @@ if (!(isset($_SESSION))){
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel = "stylesheet" href = "../../bootstrap/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel = "stylesheet" href = "../../css/styles.css">
+    <link rel = "stylesheet" href = "../../../bootstrap/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel = "stylesheet" href = "../../../css/styles.css">
 
     <title></title>
   </head>
@@ -37,13 +37,13 @@ if (!(isset($_SESSION))){
   <body class ="mainbody">
 
     <?php
-        
+
         $medical = Database::getInstance();
         $results =  $medical->retrieveData("microbio_table", array('test_request_date'), $_SESSION["regNo"]);
-        if (mysqli_num_rows($results)!=0) { 
+        if (mysqli_num_rows($results)!=0) {
             while($row = mysqli_fetch_array($results)){
                 $date =  $row['test_request_date']; //THIS NEEDS TO BE THE COMPLETED DATE NOT THE REQUESTED DATE
-                echo 
+                echo
             "
             <tr>
             <form action = \"../../views/Lab Forms/MicrobiologyRequest.php\" method = post>
@@ -55,19 +55,18 @@ if (!(isset($_SESSION))){
                 </tr>";
         }
         echo "</table>";
-        
-    }
-      
 
-      
+    }
+
+
+
 
     ?>
-    
 
 
 
-    
+
+
 
   </body>
 </html>
-
