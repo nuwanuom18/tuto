@@ -2,21 +2,13 @@
   "Home" : "home",
   "Register" : "register/register",
 
-  "Tools" : {
-    "My Tools" : "tools",
-    "Inbox" : "tools/inbox",
-    "New Patient" : "tools/AddNewPatient",
+ 
+  "New Patient" : "tools/AddNewPatient",
     "Update Patient" : "tools/Update",
-    "Filter info":"tools/existingPatient",
-    "Delete" : "tools/delete",
-    "separator" : "",
+    "Filter Patients":"tools/existingPatient",
+    "View Discharged Patients":"tools/dischargedPatient",
 
-    "Tools 3" : "tools/third"
-
-  },
-
-  "Google" : "https://www.google.com",
-  "PHP Docs" : "http://php.net/manual/en",
+  
   "Login" : "register/login",
   "Logout" : "register/logout"
 }

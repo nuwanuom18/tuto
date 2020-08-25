@@ -18,10 +18,13 @@ class Home extends Controller
 
       if(currentUser()->acl == 'Doctor'){
 
-          if($_POST){
-            dnd($_POST);
-          }
+         
         $this->view->render('home/contents');
+
+      }else if(currentUser()->acl == 'ECG Lab Assistant'){
+
+         
+        $this->view->render('home/TestRequestViewer.viewer');
 
       }
       else {

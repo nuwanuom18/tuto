@@ -18,7 +18,8 @@ class Tools extends Controller
   }
 
   public function updateAction(){
-    $this->view->render('tools/Update');
+    header("Location: /Tuto/app/views/Searching.php");
+   // $this->view->render('tools/Update');
   }
 
   public function inboxAction(){
@@ -29,12 +30,18 @@ class Tools extends Controller
     $this->view->render('tools/third');
   }
 
+  public function dischargedPatientAction(){
+    header("Location: /Tuto/app/views/DischargedPatient/Intermediate.php");
+  }
+
   public function AddNewPatientAction(){
-    $this->view->render('tools/AddNewPatient');
+   // $this->view->render('tools/AddNewPatient');
+   header("Location: /Tuto/app/views/NewPatient/NewPatientForm.php");
   }
 
   public function existingPatientAction(){
-    $this->view->render('tools/existingPatient');
+    //$this->view->render('tools/existingPatient');
+    header("Location: /Tuto/app/views/Filtering/FilterBar.php");
   }
 
   public function deleteAction(){

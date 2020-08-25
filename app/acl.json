@@ -22,8 +22,9 @@
     "denied" : {
       "Register" : ["login", "register"]
     },
+    "NewPatient":["*"],
     "Register" : ["logout"],
-    "Tools" : ["AddNewPatient","Update","existingPatient"]
+    "Tools" : ["AddNewPatient","Update","existingPatient","dischargedPatient"]
 },
 
 "Admin" :{
@@ -36,6 +37,12 @@
 "Lab Assistant" :{
   "denied" : {},
   "Tools" : ["first", "inbox"]
+
+},
+
+"ECG Lab Assistant" :{
+  "denied" : {}
+  
 
 }
 

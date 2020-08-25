@@ -18,6 +18,8 @@ $patient = $_SESSION["Patient"];
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" 
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
         <link rel = "stylesheet" href = "../../css/styles.css">
+        <link rel = "stylesheet" href = "../../../img/test.css">
+    <link rel = "stylesheet" href = "../../../style.css">
     <title></title>
   </head>
   <body >
@@ -136,8 +138,8 @@ $patient = $_SESSION["Patient"];
 
               <br>
 
-              <form action = "../../contents.php" method = post>
-                  <button class="btn btn-outline-success mr-4" type = "submit" name = "test"> Return to Main Menu </button>
+              <form action = "../../../" method = post>
+                  <button class="btn btn-outline-success mr-4" " name = "test"> Return to Main Menu </button>
             </form>
 
             </div>

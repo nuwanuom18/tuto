@@ -143,7 +143,7 @@ if (isset($_POST['diagnosis'])) {
           //$medical->enterData($test, array('patient_id','sdate'), array($regNo, date('Y-m-d')));
       }
     }
-    header("Location: ../../contents.php");
+    header("Location: ../../../");
 
       }
 

@@ -26,9 +26,14 @@
         </div>
         <select class="custom-select" id="acl" name = "acl">
           <option selected>Choose...</option>
-          <option  value="Doctor">Doctor</option>
-          <option value="Lab Assistant">Lab Assistant</option>
           <option value="Admin">Admin</option>
+          <option  value="Doctor">Doctor</option>
+          <option value="xray_lab">X-ray Lab Assistant</option>
+          <option value="ecg_lab">ECG Lab Assistant</option>
+          <option value="specimen_exam_lab">Specimen Exam Lab Assistant</option>
+          <option value="biochemical_lab">Biochemical Lab Assistant</option>
+          <option value="microbio_lab">Microbio Lab Assistant</option>
+          
         </select>
       </div>
 

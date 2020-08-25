@@ -1,4 +1,5 @@
 <?php
+include '../layouts/docmenu.php';
 include '../HeaderAndFooter/header.php';
 include '../../models/DatabaseConnection/Database.php';
 
@@ -12,6 +13,8 @@ if (!(isset($_SESSION))){
     <meta charset="utf-8">
     <link rel = "stylesheet" href = "../../../bootstrap/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel = "stylesheet" href = "../../../css/styles.css">
+    <link rel = "stylesheet" href = "../../../img/test.css">
+    <link rel = "stylesheet" href = "../../../style.css">
     <title></title>
   </head>
 

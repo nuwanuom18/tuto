@@ -1,6 +1,7 @@
 <?php
  $menu = Router::getMenu('menu_acl');//dnd($menu);
  $currentPage = currentPage();
+
  ?>
 <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
   <a class="navbar-brand" href="<?=PROOT?>home"><img src="<?=PROOT?>img/logo.png"></a>
@@ -19,10 +20,15 @@
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <?php foreach ($val as $k => $v):
-              $active = ($v == $currentPage)? 'active':''; ?>
+              $active = ($v == $currentPage)? 'active':'';
+            
+              ?>
                 <?php if ($k == 'separator'): ?>
                   <div class="dropdown-divider"></div>
-                  <?php else: ?>
+                  <?php else: 
+                  
+                    ?>
+                    
                     <a class="dropdown-item <?=$active?>" href="<?=$v?>"><?=$k?></a>
                 <?php endif; ?>
 

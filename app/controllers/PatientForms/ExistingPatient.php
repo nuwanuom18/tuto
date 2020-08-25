@@ -1,6 +1,8 @@
 <?php
+include '../../views/layouts/docmenu.php';
 include '../../views/HeaderAndFooter/header.php';
 include '../../models/DatabaseConnection/Database.php';
+//include '../../models/Users.php';
 include '../../classes/Patient.php';
 include '../../classes/Test.php';
 include '../../views/home/cache.php';
@@ -9,6 +11,7 @@ include '../../views/home/cache.php';
 if (!(isset($_SESSION))){
   session_start();
 }
+
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">

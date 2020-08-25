@@ -67,7 +67,7 @@ class Register extends Controller
     $validation = new Validate();
     $posted_values = ['fname' =>'', 'lname'=>'', 'username'=>'', 'email'=>'', 'password'=>'', 'confirm'=>''];
     if ($_POST) {
-      dnd($_POST);
+      
       $posted_values = posted_values($_POST);
       $validation->check($_POST, [
         'fname' => [

@@ -1,7 +1,7 @@
 <?php
 include '../../models/DatabaseConnection/Database.php';
 include '../../classes/Patient.php';
-include '../../cache.php';
+include '../../views/home/cache.php';
 if (!(isset($_SESSION))){
   session_start();
 }

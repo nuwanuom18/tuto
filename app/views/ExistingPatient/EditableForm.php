@@ -1,9 +1,10 @@
 <?php
+include '../layouts/docmenu.php';
   include '../../models/DatabaseConnection/Database.php';
   include '../../models/Validation.php';
   include '../HeaderAndFooter/header.php';
   include '../../classes/Patient.php';
-  //include '../../cache.php';
+  include '../../views/home/cache.php';
   if (!(isset($_SESSION))){
     session_start();
     }
@@ -15,8 +16,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel = "stylesheet" href = "../../bootstrap/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel = "stylesheet" href = "../../css/styles.css">
+    <link rel = "stylesheet" href = "../../../bootstrap/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel = "stylesheet" href = "../../../css/styles.css">
+    <link rel = "stylesheet" href = "../../../img/test.css">
+    <link rel = "stylesheet" href = "../../../style.css">
     <title></title>
   </head>
   <body class ="mainbody">
