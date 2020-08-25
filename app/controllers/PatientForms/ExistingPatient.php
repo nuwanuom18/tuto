@@ -55,7 +55,10 @@ if (!(isset($_SESSION))){
       }
 
         $columns = array('RegNo', 'FullName', 'Age', 'Gender', 'FullAddress', 'DateOfBirth', 'Diagnosis',  'BedNo','ContactNo');
-        $results =  $medical->retrieveData("patients", $columns, $_SESSION["regNo"]);
+        if($_POST){
+          $regNo = $_POST["regNo"];
+        }
+        $results =  $medical->retrieveData("patients", $columns, $regNo);
         if (mysqli_num_rows($results)!=0) {
           while($row = mysqli_fetch_array($results)){
             $regNo = $row['RegNo'];

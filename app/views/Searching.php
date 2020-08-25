@@ -1,5 +1,5 @@
 <?php
-//include './layouts/docmenu.php';
+include './layouts/docmenu.php';
 // error
 include './HeaderAndFooter/header.php';
 include '../models/DatabaseConnection/Database.php';
@@ -29,7 +29,7 @@ if (!(isset($_SESSION))){
 ?>
   <div class = "container">
 
-    <form action ="" method = "post">
+    <form action ="../controllers/PatientForms/ExistingPatient.php" method = "post">
       <div class="row h-100 ">
 
         <div class="col-lg-5  align-self-center">
@@ -66,7 +66,7 @@ if (!(isset($_SESSION))){
 
         if (isset($_POST['regNo'])){
           $_SESSION["regNo"] = $_POST['regNo'];
-          header("Location:../controllers/PatientForms/ExistingPatient.php");
+         // header("Location:../controllers/PatientForms/ExistingPatient.php");
 
     }
 
