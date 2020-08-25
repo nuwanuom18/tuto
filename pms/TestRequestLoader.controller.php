@@ -1,5 +1,5 @@
 <?php
-require_once('../app/models/Users.php');
+
 include_once "Database.model.php";
 
 include_once "TestRequestTable.model.php";
@@ -20,12 +20,12 @@ include_once 'SetUp.php';
 //$_SESSION['database']=serialize($database);
 $database = Database::getInstance();
 setup();
-$s = Users::$currentLoggedInUser();
+
 
 $factory=new Factory($database);
 $lab_assistant=new LabAssistant();
 
-$lab_assistant->setLAType("microbio_lab");
+$lab_assistant->setLAType($acllab);
 
 $request_table=$factory->makeTestRequestTable($lab_assistant);
 

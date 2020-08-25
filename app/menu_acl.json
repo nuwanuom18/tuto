@@ -2,13 +2,15 @@
   "Home" : "home",
   "Register" : "register/register",
 
- 
+  
   "New Patient" : "tools/AddNewPatient",
     "Update Patient" : "tools/Update",
     "Filter Patients":"tools/existingPatient",
     "View Discharged Patients":"tools/dischargedPatient",
+    "Delete" : "tools/delete",
 
-  
+  "Google" : "https://www.google.com",
+  "PHP Docs" : "http://php.net/manual/en",
   "Login" : "register/login",
   "Logout" : "register/logout"
 }

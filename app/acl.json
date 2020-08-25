@@ -39,11 +39,32 @@
   "Tools" : ["first", "inbox"]
 
 },
+"ecg_lab" :{
+  "denied" : {},
+  "Tools" : ["first", "inbox"]
 
-"ECG Lab Assistant" :{
-  "denied" : {}
-  
+},
+"microbio_lab" :{
+  "denied" : {},
+  "Tools" : ["first", "inbox"]
+
+},
+"biochemical_lab" :{
+  "denied" : {},
+  "Tools" : ["first", "inbox"]
+
+},
+"specimen_exam_lab" :{
+  "denied" : {},
+  "Tools" : ["first", "inbox"]
+
+},
+"xray_lab" :{
+  "denied" : {},
+  "Tools" : ["first", "inbox"]
 
 }
+
+
 
 }

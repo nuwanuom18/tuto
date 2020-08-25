@@ -1,5 +1,6 @@
 <?php
 
+
 /**
  *
  */
@@ -7,6 +8,7 @@ class Home extends Controller
 {
   public function __construct($controller , $action)
   {
+
     parent::__construct($controller , $action);
   }
 
@@ -21,9 +23,29 @@ class Home extends Controller
          
         $this->view->render('home/contents');
 
-      }else if(currentUser()->acl == 'ECG Lab Assistant'){
+      }else if(currentUser()->acl == 'ecg_lab'){
 
-         
+        $this->view->post = currentUser()->acl;
+        $this->view->render('home/TestRequestViewer.viewer');
+
+      }else if(currentUser()->acl == 'xray_lab'){
+
+        $this->view->post = currentUser()->acl;
+        $this->view->render('home/TestRequestViewer.viewer');
+
+      }else if(currentUser()->acl == 'specimen_exam_lab'){
+
+        $this->view->post = currentUser()->acl;
+        $this->view->render('home/TestRequestViewer.viewer');
+
+      }else if(currentUser()->acl == 'biochemical_lab'){
+
+        $this->view->post = currentUser()->acl;
+        $this->view->render('home/TestRequestViewer.viewer');
+
+      }else if(currentUser()->acl == 'microbio_lab'){
+
+        $this->view->post = currentUser()->acl;
         $this->view->render('home/TestRequestViewer.viewer');
 
       }
