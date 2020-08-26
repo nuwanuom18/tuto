@@ -55,7 +55,7 @@ if (!(isset($_SESSION))){
       }
 
         $columns = array('RegNo', 'FullName', 'Age', 'Gender', 'FullAddress', 'DateOfBirth', 'Diagnosis',  'BedNo','ContactNo');
-        if($_POST){
+        if(isset($_POST)){
           $regNo = $_POST["regNo"];
         }
         $results =  $medical->retrieveData("patients", $columns, $regNo);
