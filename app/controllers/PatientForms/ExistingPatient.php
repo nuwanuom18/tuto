@@ -1,6 +1,8 @@
 <?php
-include '../../views/HeaderAndFooter/header.php';
+include '../../views/layouts/docmenu.php';
+// include '../../views/HeaderAndFooter/header.php';
 include '../../models/DatabaseConnection/Database.php';
+//include '../../models/Users.php';
 include '../../classes/Patient.php';
 include '../../classes/Test.php';
 include '../../views/home/cache.php';
@@ -14,11 +16,11 @@ if (!(isset($_SESSION))){
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel = "stylesheet" href = "../../../bootstrap/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel = "stylesheet" href = "../../../bootstrap/css/bootstrap.min.css" integrity="" crossorigin="anonymous">
+    <link rel = "stylesheet" href = "../../../style.css">
     <link rel = "stylesheet" href = "../../../css/styles.css">
+    
     <title> </title>
   </head>
   <body class = 'mainbody'>
@@ -52,7 +54,14 @@ if (!(isset($_SESSION))){
       }
 
         $columns = array('RegNo', 'FullName', 'Age', 'Gender', 'FullAddress', 'DateOfBirth', 'Diagnosis',  'BedNo','ContactNo');
-        $results =  $medical->retrieveData("patients", $columns, $_SESSION["regNo"]);
+        if(isset($_POST['regNo'])){
+          $regNo = $_POST["regNo"];
+          $_SESSION["regNo"] = $_POST['regNo'];
+        }
+        else if(isset($_SESSION['regNo'])){
+          $regNo = $_SESSION["regNo"];
+        }
+        $results =  $medical->retrieveData("patients", $columns, $regNo);
         if (mysqli_num_rows($results)!=0) {
           while($row = mysqli_fetch_array($results)){
             $regNo = $row['RegNo'];
@@ -70,13 +79,13 @@ if (!(isset($_SESSION))){
             else{
               $admission = "Admitted";
             }
-
             $patient = new Patient($regNo, $name, $age, $address,$diagnosis,$dob,$gender,$admission, $bedNo, $contact,"Existing");
             $_SESSION["Patient"] = $patient;
             $patient->displayUI();
             //include '../../views/ExistingPatient/ExistingPatientForm.php';
           }
         }
+      
         else{
           echo "Registration number not found.";
         }
@@ -84,3 +93,4 @@ if (!(isset($_SESSION))){
           </div>
     </body>
 </html>
+
