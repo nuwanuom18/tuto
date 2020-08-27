@@ -16,16 +16,8 @@
         <div class="input-group-prepend">
           <label class="input-group-text textStyle" for="acl">Account Type</label>
         </div>
-        <select class="custom-select grpstyle"  id="acl" name="acl">
-          <option <?php echo ($this->user['acl']=='choose')?'selected':''; ?>  value="choose" class="textStyle">Choose...</option>
-          <option <?php echo ($this->user['acl']=='Admin')?'selected':''; ?>  value="Admin" class="textStyle">Admin</option>
-          <option <?php echo ($this->user['acl']=='Doctor')?'selected':''; ?> value="Doctor" class="textStyle">Doctor</option>
-          <option <?php echo ($this->user['acl']=='Lab Assistant')?'selected':''; ?> value="Lab Assistant" class="textStyle">Lab Assistant</option>
-        </select>
-      </div>
-<<<<<<< HEAD
-=======
-      <select class="custom-select"  id="acl" name="acl">
+      
+      <select class="custom-select grpstyle"  id="acl" name="acl">
         <option <?php echo ($this->user['acl']=='choose')?'selected':''; ?>  value="choose">Choose...</option>
         <option <?php echo ($this->user['acl']=='Admin')?'selected':''; ?>  value="Admin">Admin</option>
         <option <?php echo ($this->user['acl']=='Doctor')?'selected':''; ?> value="Doctor">Doctor</option>
@@ -36,7 +28,6 @@
         <option <?php echo ($this->user['acl']=='microbio_lab')?'selected':''; ?> value="microbio_lab">Microbio Lab Assistant</option>
       </select>
     </div>
->>>>>>> fbb866a3727f336eb3949e8c1b99b83dcefc7c2e
 
 
       <div class="input-group mb-3 form-group w-50">
