@@ -17,7 +17,11 @@
         <option <?php echo ($this->user['acl']=='choose')?'selected':''; ?>  value="choose">Choose...</option>
         <option <?php echo ($this->user['acl']=='Admin')?'selected':''; ?>  value="Admin">Admin</option>
         <option <?php echo ($this->user['acl']=='Doctor')?'selected':''; ?> value="Doctor">Doctor</option>
-        <option <?php echo ($this->user['acl']=='Lab Assistant')?'selected':''; ?> value="Lab Assistant">Lab Assistant</option>
+        <option <?php echo ($this->user['acl']=='xray_lab')?'selected':''; ?> value="xray_lab">X-ray Lab Assistant</option>
+        <option <?php echo ($this->user['acl']=='ecg_lab')?'selected':''; ?> value="ecg_lab">ECG Lab Assistant</option>
+        <option <?php echo ($this->user['acl']=='specimen_exam_lab')?'selected':''; ?> value="specimen_exam_lab">Specimen Exam Lab Assistant</option>
+        <option <?php echo ($this->user['acl']=='biochemical_lab')?'selected':''; ?> value="biochemical_lab">Biochemical Lab Assistant</option>
+        <option <?php echo ($this->user['acl']=='microbio_lab')?'selected':''; ?> value="microbio_lab">Microbio Lab Assistant</option>
       </select>
     </div>
 
