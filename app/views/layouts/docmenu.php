@@ -8,82 +8,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
    
-
-    <link rel="stylesheet" href="../../../css/bootstrap.min.css" media="screen" title="no title" charset="utf-8">
-
-
-
-
-    <script src="<?=PROOT?>js/jQuery-2.2.4.min.js"></script>
-    <script src="<?=PROOT?>js/bootstrap.min.js"></script>
     <script src="https://use.fontawesome.com/releases/v5.5.0/js/all.js"></script>
-   
-    <link rel="stylesheet" media="screen" href="../../../style.css">
-    <link rel="stylesheet" media="screen" href="../../../img/test.css">
+    <link rel = "stylesheet" href = "../../bootstrap/css/bootstrap.min.css" integrity="" crossorigin="anonymous">
+    <link rel="stylesheet" media="screen" href="../../css/styles.css">
 
 
   
 
 
   </head>
-  <body>
-
-      <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top ">
-      <a class="navbar-brand" href="<?=PROOT?>home"><img src="../../../img/logo.png"></a>
 
 
-		<button class="navbar-toggler" type="button" data-toggle="collapse"
-		 data-target="#navbarResponsive">
-		<span class="navbar-toggler-icon"></span>
-		</button>
+      <nav class="navbar navbar-expand-md  navbarcustom ">
+      <a class="navbar-brand" href="<?=PROOT?>home"><img src="../../../css/hoslogo.png"></a>
+
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main_menu" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon">
+    <i class="fas fa-bars" style="color:#FEA736; font-size:28px;"></i>
+    </span>
+  </button>
+    <div class="navbar-header">
+        <div align='start' class = "mainHeading"> LADY RIDGEWAY HOSPITAL FOR CHILDREN, COLOMBO  </div>
+        <div align='start' class= "mainSubHeading"> OUT-PATIENT DEPARTMENT </div>
+    </div>
 
 		<div class="collapse navbar-collapse" id="navbarResponsive">
-			<ul class="navbar-nav ml-auto">
+			<ul class="navbar-nav ml-auto dropdown">
 				<li class="nav-item">
 					<a class="nav-link" href="\Tuto\" >Home</a>
-                </li>
+        </li>
                 
-                
+				<li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" 
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Tools
+            </a>
+                   
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="nav-link dropdown-item" href="/Tuto/app/views/NewPatient/NewPatientForm.php">New Patient</a>
+              <a class="nav-link dropdown-item" href="/Tuto/app/views/Searching.php">Update Patient</a>
+              <a class="nav-link dropdown-item" href="/Tuto/app/views/Filtering/FilterBar.php">Filter Patients</a>
+              <a class="nav-link dropdown-item" href="/Tuto/app/views/DischargedPatient/Intermediate.php">View Discharged Patients</a>
+            </div>
 
-				
-
-				<li class="nav-item">
-					<a class="nav-link" href="/Tuto/app/views/NewPatient/NewPatientForm.php">New Patient</a>
-                </li>
-                
-                <li class="nav-item">
-					<a class="nav-link" href="/Tuto/app/views/Searching.php">Update Patient</a>
-                </li>
-                
-                <li class="nav-item">
-					<a class="nav-link" href="/Tuto/app/views/Filtering/FilterBar.php">Filter Patients</a>
-                </li>
-                
-                <li class="nav-item">
-					<a class="nav-link" href="/Tuto/app/views/DischargedPatient/Intermediate.php">View Discharged Patients</a>
-                </li>
-                
-                <li class="nav-item">
+        </li>
+                     
+                <li class="nav-item dropdown">
 					<a class="nav-link" href="/Tuto/register/logout">logout</a>
 				</li>
 
                 
-                
-
 			</ul>
-		
-		
 		
 	</nav>
      
-
-
-    
-
-    
-
-
-
-
-  </body>
+ 
 </html>

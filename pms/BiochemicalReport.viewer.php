@@ -11,19 +11,9 @@ $test_date=$_SESSION['request_date'];
 	<head>
 		<meta charset="utf-8">
         <title> Biochemical</title>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
-            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
-        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" 
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" 
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" 
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="sheet1.css">
-        <link rel="stylesheet" href="../img/test.css">
-       
-       <link rel="stylesheet" href="../style.css">
+        <link rel = "stylesheet" href = "../bootstrap/css/bootstrap.min.css" integrity="" crossorigin="anonymous">
+        <!-- <link rel="stylesheet" href="../css/styles.css"> -->
+       <link rel="stylesheet" href="../css/labReportStyles.css">
 	</head>
 	<body>
         <header>
@@ -32,9 +22,8 @@ $test_date=$_SESSION['request_date'];
                 <div class=" form group row">
                 
                     <div class="col-8">
-                        <h4> LADY RIDGEWAY HOSPITAL - COLOMBO 08</h4>
-                        <h4> DEPARTMENT OF CHEMICAL PATHOLOGY</h4>
-                        <h5> <u> Request Form for Biochemical Investigations</u></h5>
+                        <h4 class="mainHeading"> DEPARTMENT OF CHEMICAL PATHOLOGY</h4>
+                        <h5 class="mainHeading">  Request Form for Biochemical Investigations</h5>
 
                     </div>
                     
@@ -110,7 +99,7 @@ $test_date=$_SESSION['request_date'];
 
             </table>
             
-            <p><b>Fasting Status :</b></p>
+            <p class="optionText">Fasting Status :</p>
 
             <div class="custom-control custom-checkbox custom-control-inline">
                 <input type="radio" class="custom-control-input" id="inlineCheckbox1" name="inlineCheckbox1" value="lessFour">
@@ -152,7 +141,7 @@ $test_date=$_SESSION['request_date'];
 
             <hr class="newhr"> 
 
-            <p><b>Please send in separate request forms for Serum, Plasma(Glucose) and CSF </b></p>
+            <p class="optionText"><b>Please send in separate request forms for Serum, Plasma(Glucose) and CSF </b></p>
 
         </div>
 
@@ -334,7 +323,7 @@ $test_date=$_SESSION['request_date'];
                 <tbody>
                     <tr>
                         <td>
-                           <b> Name and Designation of the requesting medical</b>
+                           <b class="optionText"> Name and Designation of the requesting medical</b>
 
                             <div class="form-group ">
                             
@@ -352,7 +341,7 @@ $test_date=$_SESSION['request_date'];
                         </td>
 
                         <td>
-                            <b>To be filled by the Nursing Officer</b>
+                            <b class="optionText">To be filled by the Nursing Officer</b>
 
                             <div class="form-group w-50" >
                                 <label for="Date2">Date :</label> 
@@ -383,7 +372,7 @@ $test_date=$_SESSION['request_date'];
 
         <div class="container">
             <hr class="newhr">
-            <b>To be filled at the laboratory reception.</b>
+            <b class="optionText">To be filled at the laboratory reception.</b>
             <br>
 
             <p> Date and Time of sample receipt :</p>
@@ -433,7 +422,7 @@ $test_date=$_SESSION['request_date'];
             <br>
             <br>
             <footer>
-                <p><b> Please folllow the instructions provided to your unit. For further
+                <p style="color: #297578;"><b> Please folllow the instructions provided to your unit. For further
                     information and clarifications please contact Department of Chemical Pathology.
                     011-2693711 Ext.:314
                 </b></p>

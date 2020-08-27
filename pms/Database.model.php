@@ -4,7 +4,7 @@ class Database{
     private $name = "medical";   //Database name
     private $host = "localhost";    //Database server
     private $user = "root";  //Database username
-    private $password = "nuwansql";    //Database password
+    private $password = "";    //Database password
     private static $instance;
     private static $link;
 

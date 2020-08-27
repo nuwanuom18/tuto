@@ -1,6 +1,6 @@
 <?php
 include '../../views/layouts/docmenu.php';
-include '../../views/HeaderAndFooter/header.php';
+// include '../../views/HeaderAndFooter/header.php';
 include '../../models/DatabaseConnection/Database.php';
 //include '../../models/Users.php';
 include '../../classes/Patient.php';
@@ -17,11 +17,11 @@ if (!(isset($_SESSION))){
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel = "stylesheet" href = "../../../bootstrap/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-      <link rel = "stylesheet" href = "../../../css/styles.css">
+    <link rel = "stylesheet" href = "../../../bootstrap/css/bootstrap.min.css" integrity="" crossorigin="anonymous">
+    <link rel = "stylesheet" href = "../../../style.css">
+    <link rel = "stylesheet" href = "../../../css/styles.css">
+    
     <title> </title>
   </head>
   <body class = 'mainbody'>
@@ -37,7 +37,7 @@ if (!(isset($_SESSION))){
                 {
                   $class_name = ucfirst($test);
                   $command = new $class_name;
-                  $command->execute($medical,array($_SESSION["regNo"], date('Y-m-d')));
+                  $command->execute($medical,array($_POST["regNo"], date('Y-m-d')));
                   //$medical->enterData($test, array('patient_id','sdate'), array($_SESSION["regNo"], date('Y-m-d')));
                 }
             }
@@ -50,14 +50,14 @@ if (!(isset($_SESSION))){
             $medicine = htmlspecialchars($_POST["medicine"]);
             $signs = htmlspecialchars($_POST["signs"]);
             $notes= htmlspecialchars($_POST["notes"]);
-            $medical -> enterData("history", $columns, array($_SESSION["regNo"],date('Y-m-d'), $signs, $medicine,$notes));
+            $medical -> enterData("history", $columns, array($_POST["regNo"],date('Y-m-d'), $signs, $medicine,$notes));
         }
       }
 
         $columns = array('RegNo', 'FullName', 'Age', 'Gender', 'FullAddress', 'DateOfBirth', 'Diagnosis',  'BedNo','ContactNo');
-        if($_POST){
+        if(isset($_POST['regNo'])){
           $regNo = $_POST["regNo"];
-        }
+          $_SESSION["regNo"] = $_POST['regNo'];
         $results =  $medical->retrieveData("patients", $columns, $regNo);
         if (mysqli_num_rows($results)!=0) {
           while($row = mysqli_fetch_array($results)){
@@ -83,6 +83,7 @@ if (!(isset($_SESSION))){
             //include '../../views/ExistingPatient/ExistingPatientForm.php';
           }
         }
+      }
         else{
           echo "Registration number not found.";
         }

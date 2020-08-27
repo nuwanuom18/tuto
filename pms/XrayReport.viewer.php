@@ -17,24 +17,15 @@ $test_date=$_SESSION['request_date'];
   <head>
     <meta charset="utf-8">
     <title>Xray form</title>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" 
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" 
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" 
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="sheet1.css">
-        <link rel="stylesheet" href="../img/test.css">
-       
-       <link rel="stylesheet" href="../style.css">
+        <link rel = "stylesheet" href = "../bootstrap/css/bootstrap.min.css" integrity="" crossorigin="anonymous">
+        <link rel="stylesheet" href="../css/styles.css">
+       <link rel="stylesheet" href="../css/labReportStyles.css">
 
   </head>
   <body>
     <header>
         <div class="container text-center">
-            <h4> REQUISITION FOR X-RAY DIAGNOSTIC EXAMINATION   </h4>
+            <h4 class="mainHeading"> REQUISITION FOR X-RAY DIAGNOSTIC EXAMINATION   </h4>
             <br>
         </div>
     </header>
@@ -104,10 +95,10 @@ $test_date=$_SESSION['request_date'];
                 <tr>
                     <td colspan="2"> 
                         
-                        <p><b> Clinical History </b></p>
+                        <p class="optionText">Clinical History </p>
                     </td>
                     <td> 
-                    <p><b>Region and Nature of Examination </p></b>
+                    <p class="optionText">Region and Nature of Examination </p>
                     </td>
                     <td rowspan="2">
                         <div class="form-check ">

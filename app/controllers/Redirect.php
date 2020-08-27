@@ -26,7 +26,7 @@ class Redirect extends Controller
             </div>';
 
         $posted_values['button'] = '<div class="input-group-append">
-          <button name="button" id="button" value="button" class="btn btn-outline-danger" type="submit">Delete Account</button>
+          <button name="button" id="button" value="button" class="btn btn-outline-danger deletebtn" type="submit">Delete Account</button>
         </div>';
 
 

@@ -1,6 +1,5 @@
 <?php
 include '../../views/layouts/docmenu.php';
-include '../../views/HeaderAndFooter/header.php';
 include '../../models/DatabaseConnection/Database.php';
 include '../../views/home/cache.php';
 

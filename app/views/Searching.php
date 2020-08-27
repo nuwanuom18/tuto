@@ -1,9 +1,9 @@
 <?php
 include './layouts/docmenu.php';
 // error
-include './HeaderAndFooter/header.php';
+ //include './HeaderAndFooter/header.php';
 include '../models/DatabaseConnection/Database.php';
-include 'home/cache.php';
+//  include 'home/cache.php';
 if (!(isset($_SESSION))){
   session_start();
 }
@@ -13,7 +13,7 @@ if (!(isset($_SESSION))){
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel = "stylesheet" href = "../../bootstrap/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel = "stylesheet" href = "../../bootstrap/css/bootstrap.min.css" integrity="" crossorigin="anonymous">
 
     
     <link rel = "stylesheet" href = "../../css/styles.css">
@@ -23,11 +23,9 @@ if (!(isset($_SESSION))){
   </head>
 
   <body class = 'mainbody'>
-  <?php
-
-
-?>
+  
   <div class = "container">
+    
 
     <form action ="../controllers/PatientForms/ExistingPatient.php" method = "post">
       <div class="row h-100 ">
@@ -63,12 +61,12 @@ if (!(isset($_SESSION))){
         $medical -> makeTable("patients",array('RegNo', 'FullName', 'Age', 'Gender', 'FullAddress', 'DateOfBirth', 'Diagnosis') ,
         array("VARCHAR(20) NOT NULL PRIMARY KEY", "VARCHAR(70) NOT NULL","INT NOT NULL", "VARCHAR(10) NOT NULL",
         "VARCHAR(50) NOT NULL", "DATE NOT NULL", "VARCHAR(30) NOT NULL"));
-
+/*
         if (isset($_POST['regNo'])){
           $_SESSION["regNo"] = $_POST['regNo'];
          // header("Location:../controllers/PatientForms/ExistingPatient.php");
 
-    }
+    }*/
 
 
     ?>

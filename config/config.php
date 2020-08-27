@@ -7,9 +7,9 @@ define('PROOT', '/Tuto/');
 define('SITE_TITLE' , 'Tuto App'); // This will be used if no site title is set.
 define('MENU_BRAND', 'Tuto');
 
-define('DB_NAME' , 'Tuto'); // database name
+define('DB_NAME' , 'medical'); // database name
 define('DB_USER' , 'root'); //
-define('DB_PASSWORD' , 'nuwansql');
+define('DB_PASSWORD' , '');
 define('DB_HOST' , '127.0.0.1'); // database host ** use IP address to avoid DNS lookup
 
 

@@ -10,21 +10,19 @@
 
     <link rel="stylesheet" href="<?=PROOT?>css/bootstrap.min.css" media="screen" title="no title" charset="utf-8">
 
-
-
-
     <script src="<?=PROOT?>js/jQuery-2.2.4.min.js"></script>
     <script src="<?=PROOT?>js/bootstrap.min.js"></script>
     <script src="https://use.fontawesome.com/releases/v5.5.0/js/all.js"></script>
     <link rel="stylesheet" media="screen" href="<?=PROOT?>style.css">
     <link rel="stylesheet" media="screen" href="<?=PROOT?>img/test.css">
+    <link rel="stylesheet" media="screen" href="/Tuto/css/styles.css">
 
 
     <?=  $this->content('head'); ?>
 
 
   </head>
-  <body>
+  <body class ="mainbody">
       <div class="offset">
         <?php include 'main_menu.php' ?>
       </div>

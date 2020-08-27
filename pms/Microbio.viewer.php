@@ -12,25 +12,14 @@ $test_date=$_SESSION['request_date'];
 	<head>
 		<meta charset="utf-8">
         <title>microbiology request</title>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
-        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="sheet1.css">
-        <link rel="stylesheet" href="../img/test.css">
-       
-       <link rel="stylesheet" href="../style.css">
+        <link rel = "stylesheet" href = "../bootstrap/css/bootstrap.min.css" integrity="" crossorigin="anonymous">
+         <link rel="stylesheet" href="../style.css">
+       <link rel="stylesheet" href="../css/labReportStyles.css">
     </head>
 	<body>
         <header>
             <div class="container text-center">
-                <h4> Lady Redgeway Hospital</h4>
-                <h3> MICROBIOLOGY REQUEST FORM </h3>
+                <h3 class="mainHeading"> MICROBIOLOGY REQUEST FORM </h3>
             </div>
         </header>
       <form action="Microbio.control.php" method="POST">
@@ -40,11 +29,11 @@ $test_date=$_SESSION['request_date'];
                 <tbody>
                     <tr>
                         <td rowspan="2">  Date &amp; Time of <br> collection of specimen </td>
-                        <td colspan="2"> <b> LAB USE ONLY </b> </td>
+                        <td colspan="2" class ="optionText"> <b> LAB USE ONLY </b> </td>
                         <tr>
 
                             <td >
-                                <div class="form-group w-50" >
+                                <div class="form-group w-75" >
                                     <label for="Date">Date of receipt</label>
                                     <input type="date" name="date_of_receipt" id="Date" class="form-control form-control-sm">
                                 </div>
@@ -130,7 +119,7 @@ $test_date=$_SESSION['request_date'];
 
                 <div class="form-group w-25">
                     <label for="prior-anti">  Antibiotic given prior to culture:</label>
-                    <select name="prior-anti" id="prior-anti" class="form-control form-control-sm ">
+                    <select name="prior-anti" id="prior-anti" class="form-control form-control-sm boxstyles">
                         <option value="YES"> Yes</option>
                         <option value="NO"> No</option>
                     </select>
@@ -161,9 +150,9 @@ $test_date=$_SESSION['request_date'];
 
               </div>
 
-              <div class="form-group w-25">
-                        <label for="designation">  Designation:</label>
-                        <select name="designation" id="designation" class="form-control form-control-sm">
+              <div class="form-group w-25 ">
+                        <label for="designtion">  Designation:</label>
+                        <select name="designation" id="designation" class="form-control form-control-sm boxstyles">
                             <option value="HO"> HO</option>
                             <option value="MO"> MO</option>
                             <option value="SHO"> SHO</option>

@@ -1,9 +1,9 @@
 <?php
-include '../layouts/docmenu.php';
-include '../HeaderAndFooter/header.php';
+ include '../layouts/docmenu.php';
+//include '../HeaderAndFooter/header.php';
 include '../../models/DatabaseConnection/Database.php';
 include '../../classes/Patient.php';
-//include '../../cache.php';
+// include '../../cache.php';
 if (!(isset($_SESSION))){
   session_start();
 
@@ -17,10 +17,10 @@ if (!(isset($_SESSION))){
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel = "stylesheet" href = "../../../bootstrap/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel = "stylesheet" href = "../../../css/styles.css">
+    <link rel = "stylesheet" href = "../../../bootstrap/css/bootstrap.min.css" integrity="" crossorigin="anonymous">
     <link rel = "stylesheet" href = "../../../img/test.css">
     <link rel = "stylesheet" href = "../../../style.css">
+    <link rel = "stylesheet" href = "../../../css/styles.css">
 
     <title> </title>
   </head>
@@ -147,7 +147,7 @@ if (!(isset($_SESSION))){
 
       <div class="ml-5">
 
-        <input  type = 'checkbox' name = 'tests[]' value = 'xray_request_table '>  <span class ="textStyle">: X-Ray </span><br>
+        <input  type = 'checkbox' name = 'tests[]' value = 'xray_request_table'>  <span class ="textStyle">: X-Ray </span><br>
         <input class ="textStyle" type = 'checkbox' name = 'tests[]' value = 'biochemical_request_table'> <span class ="textStyle"> : Biochemical Investigation</span><br>
         <input class ="textStyle" type = 'checkbox' name = 'tests[]' value = 'ecg_request_table'>  <span class ="textStyle">: ECG</span>  <br>
         <input class ="textStyle" type = 'checkbox' name = 'tests[]' value = 'specimen_exam_request_table'> <span class ="textStyle"> : Specimen Examination</span><br>
