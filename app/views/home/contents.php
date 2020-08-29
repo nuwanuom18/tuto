@@ -15,7 +15,9 @@ include 'SetUp.php';
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="./bootstrap/js/bootstrap.min.js"></script>
     <link rel = "stylesheet" href = "./bootstrap/css/bootstrap.min.css" integrity="" crossorigin="anonymous">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <link rel = "stylesheet" href = "./css/styles.css">
     <title></title>
   </head>

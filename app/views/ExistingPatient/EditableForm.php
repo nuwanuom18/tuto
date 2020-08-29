@@ -15,6 +15,8 @@ include '../layouts/docmenu.php';
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="../../../js/jQuery-2.2.4.min.js"></script>
+    <script src="../../../bootstrap/js/bootstrap.min.js"></script>
     <link rel = "stylesheet" href = "../../../bootstrap/css/bootstrap.min.css" integrity="" crossorigin="anonymous">
     <link rel = "stylesheet" href = "../../../css/styles.css">
     <link rel = "stylesheet" href = "../../../img/test.css">

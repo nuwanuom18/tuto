@@ -8,20 +8,24 @@ $patient = $_SESSION["Patient"];
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <script src="../../../js/jQuery-2.2.4.min.js"></script>
+    <script src="../../../bootstrap/js/bootstrap.min.js"></script>
     <link rel = "stylesheet" href = "../../bootstrap/css/bootstrap.min.css" integrity="" crossorigin="anonymous">
     <link rel = "stylesheet" href = "../../style.css">
     <link rel = "stylesheet" href = "../../css/styles.css">
     <title></title>
   </head>
   <body >
+  <br>
   <div class = containor  style="margin-left:20px; margin-right:20px;">
 
     <form action ="" method = "post">
 
         <div class="form-row">
+         
 
           <div class="col-md-3 mb-3 col-md-offset-4 mr-3">
-              <label for="regNo">Registration Number</label>
+              <label for="regNo" class ="textStyle">Registration Number</label>
               <input type="text" class="form-control boxstyles" id="regNo" name="regNo" placeholder="Registration Number" value='<?php echo $patient->getRegNo();?>' readonly>          
           </div>
           
@@ -30,13 +34,13 @@ $patient = $_SESSION["Patient"];
         <div class="form-row">
 
           <div class="col-md-6 mb-3 col-md-offset-2">
-            <label for="name">Full Name</label>
+            <label for="name" class ="textStyle">Full Name</label>
             <input type="text" class="form-control boxstyles" id="name" name="name" placeholder="Full Name" value='<?php echo  $patient->getName();?>' readonly>
           </div>
 
           <div class="ml-5">
             <div class="col-md-7 mb-3 col-md-offset-4 mr-3">
-                <label for="age">Age</label>
+                <label for="age" class ="textStyle">Age</label>
                 <input type="text" class="form-control boxstyles" id="age" name="age" placeholder="Age" value='<?php echo  $patient->getAge();?>' readonly>          
             </div>
           </div>
@@ -46,7 +50,7 @@ $patient = $_SESSION["Patient"];
         <div class="form-row">
 
           <div class="col-md-6 mb-3 col-md-offset-4">
-              <label for="diagnosis">Diagnosis</label>
+              <label for="diagnosis" class ="textStyle">Diagnosis</label>
               <input type="text" class="form-control boxstyles " id="diagnosis" name="diagnosis" placeholder="Diagnosis" value='<?php echo $patient->getDiagnosis();?>' readonly>          
           </div>
           
@@ -55,13 +59,13 @@ $patient = $_SESSION["Patient"];
         <div class="form-row">
 
           <div class="col-md-6 mb-3 col-md-offset-4">
-              <label for="address">Full Address</label>
+              <label for="address" class ="textStyle">Full Address</label>
               <input type="text" class="form-control" id="address" name="address" placeholder="Full Address" value='<?php echo$patient->getAddress();?>' readonly>          
           </div>
 
           <div class="ml-5">
           <div class="col-md-10 mb-3 col-md-offset-4">
-              <label for="address">Contact No.</label>
+              <label for="address" class ="textStyle">Contact No.</label>
               <input type="text" class="form-control" id="contact" name="contact" placeholder="Contact Number"  value='<?php echo $patient->getContact();?>' readonly>          
           </div>
           </div>
@@ -70,16 +74,16 @@ $patient = $_SESSION["Patient"];
 
         <div class="form-row">
           <div class="col-md-2 mb-3 col-md-offset-4">
-              <label for="dob">Date of Birth</label>
+              <label for="dob" class ="textStyle">Date of Birth</label>
               <input type="date" class="form-control" id="dob" name="dob" value='<?php echo $patient->getDOB();?>' readonly>          
           </div>
           <div class="col-md-2 mb-3 col-md-offset-4">
-              <label for="gender">Gender</label>
+              <label for="gender" class ="textStyle">Gender</label>
               <input type="text" class="form-control" id="gender" name="gender" value='<?php echo $patient->getGender();?>' readonly>          
         </div>
 
           <div class="col-md-2 mb-3 col-md-offset-4">
-              <label for="gender">Admission Status</label>
+              <label for="gender" class ="textStyle">Admission Status</label>
               <input type="text" class="form-control" id="admission" name="admission" value='<?php echo $patient->getAdmissionStatus();?>' readonly>          
           
           </div>

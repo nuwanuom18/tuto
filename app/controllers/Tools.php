@@ -59,7 +59,7 @@ class Tools extends Controller
         $posted_values['acl'] = $user->acl;
         $posted_values['username'] = $_POST['username'];
 
-        $posted_values['smessage']= '<div class="alert alert-success w-50" role="alert">
+        $posted_values['smessage']= '<div class="alert alert-success w-50 deletepagesuceespopup" role="alert">
           User exists! check user details below before you delete
             </div>';
 
@@ -69,7 +69,7 @@ class Tools extends Controller
       }
       else{
         $posted_values['message']=
-        '<div class="alert alert-warning w-50" role="alert">
+        '<div class="alert alert-warning w-50 deletepagepopups" role="alert">
         Invalid Username or Account type!
           </div>';
 

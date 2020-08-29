@@ -46,13 +46,13 @@
 }
 .form-control:disabled, .form-control[readonly] {
   background-color:white ;
-  opacity: 35%;
+  opacity: 45%;
   color:black;
   font-weight: 500;
 }
 input[type=text] , input[type=number] ,textarea, input[type=date] , input[type=time]  {
   background-color:white ;
-  opacity: 35%;
+  opacity: 55%;
   color:black;
   font-weight: 500;
 }
@@ -103,3 +103,27 @@ table.table-bordered > tbody > tr > td{
 }
  
     
+/* lab assitant homepage */
+.labheading{
+  padding:20px ;
+  border-radius:20px;
+  width: 600px !important;
+  height: 60px !important;
+  background-color: #297578;
+  color: white;
+
+}
+.testcontainer{
+  padding:20px ;
+  border-radius:20px;
+  width: 600px !important;
+  background-color: white;
+}
+.labdatenidstyle{
+  color:#297578;
+  font-weight: bold;
+}
+
+.labdatenidvaluestyle{
+  color:#FEA736;
+}

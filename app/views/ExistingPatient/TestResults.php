@@ -11,6 +11,8 @@ if (!(isset($_SESSION))){
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <script src="../../../js/jQuery-2.2.4.min.js"></script>
+    <script src="../../../bootstrap/js/bootstrap.min.js"></script>
     <link rel = "stylesheet" href = "../../../bootstrap/css/bootstrap.min.css" integrity="" crossorigin="anonymous">
     <link rel = "stylesheet" href = "../../../css/styles.css">
     <link rel = "stylesheet" href = "../../../img/test.css">
@@ -21,9 +23,9 @@ if (!(isset($_SESSION))){
 </div>
 <br>
   <body class ="mainbody">
-  <div class = " container ">
+  <div class = "container d-flex justify-content-center" >
 
-  <div class="form-group w-25   ">
+  <div class="form-group w-25">
         <button type="button" class="btn btn-outline-success mr-4 btn-block justify-content-center"  onclick="window.location.href = '../TestResults/BiochemicalInvestigations.php';">Biochemical Investigations</button>
         <button type="button" class="btn btn-outline-success mr-4 btn-block"  onclick="window.location.href = '../TestResults/ECG.php';">ECG  </button>
         <button type="button" class="btn btn-outline-success mr-4 btn-block"  onclick="window.location.href = '../TestResults/microbio.php';">Microbiology Tests</button>

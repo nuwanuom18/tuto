@@ -17,7 +17,6 @@ if (!(isset($_SESSION))){
 
     
     <link rel = "stylesheet" href = "../../css/styles.css">
-    <link rel = "stylesheet" href = "../../img/test.css">
     <link rel = "stylesheet" href = "../../style.css">
     <title></title>
   </head>

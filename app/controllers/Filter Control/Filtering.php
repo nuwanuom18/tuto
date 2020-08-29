@@ -16,6 +16,8 @@ include '../../views/layouts/docmenu.php';
   <head>
   <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="../../../js/jQuery-2.2.4.min.js"></script>
+    <script src="../../../bootstrap/js/bootstrap.min.js"></script>
     <link rel = "stylesheet" href = "../../../bootstrap/css/bootstrap.min.css" integrity="" crossorigin="anonymous">
     <link rel = "stylesheet" href = "../../../style.css">
     <link rel = "stylesheet" href = "../../../css/styles.css">
@@ -35,7 +37,8 @@ include '../../views/layouts/docmenu.php';
     }
   }
     // echo "Diagnosis selected : $diagnosis";
-     echo "<p class =\"textStyle\">Diagnosis selected : $diagnosis</p> ";
+     echo"<br>";
+     echo "<h5 class =\"textStyle\">Diagnosis selected : $diagnosis</h5> ";
     $medical = Database::getInstance();
     $columns = array('RegNo', 'FullName', 'Age', 'Gender', 'FullAddress', 'DateOfBirth', 'Diagnosis',  'BedNo','ContactNo');
     $results =  $medical->filterDataByDiagnosis( "patients", $columns, $diagnosis);
@@ -44,11 +47,11 @@ include '../../views/layouts/docmenu.php';
       echo "<table class=\"table table-bordered\" >
       <thead>
         <tr>
-            <th style=\"text-align:center\" scope=\"col\" >Registration No.</th>
-            <th style=\"text-align:center\" scope=\"col\" >Patient Name</th>
-            <th style=\"text-align:center\" scope=\"col\" >Age</th>
-            <th style=\"text-align:center\" scope=\"col\" >Gender</th>
-            <th style=\"text-align:center\" scope=\"col\" >History</th>
+            <th style=\"text-align:center\" scope=\"col\"class='textStyle' > <b>Registration No.</b> </th>
+            <th style=\"text-align:center\" scope=\"col\" class='textStyle' ><b>Patient Name</b> </th>
+            <th style=\"text-align:center\" scope=\"col\" class='textStyle' ><b>Age</b> </th>
+            <th style=\"text-align:center\" scope=\"col\" class='textStyle' ><b>Gender</b> </th>
+            <th style=\"text-align:center\" scope=\"col\" class='textStyle' ><b>History</b> </th>
         </tr>
       </thead>
       <tbody>";
@@ -61,18 +64,19 @@ include '../../views/layouts/docmenu.php';
             "
             <form method=\"post\" action=\"../PatientForms/ExistingTreatmentsFiltered.php\">
             <tr>
-              <td > <input type=\"text\" style=\"text-align:center\" class=\"form-control\" name=\"regNo\" value=$regNo readonly/> </td>
-              <td > <input type=\"text\" style=\"text-align:center\" class=\"form-control\" value=$name readonly/> </td>
-              <td > <input type=\"text\" style=\"text-align:center\" class=\"form-control\" value=$age readonly/> </td>
-              <td > <input type=\"text\" style=\"text-align:center\" class=\"form-control\" value=$gender readonly/> </td>
-              <td style=\"text-align:center\">  <input type=\"submit\" name=\"action\" value=\"View Patient History\"/>  </td>
+              <td > <input type=\"text\" style=\"text-align:center\" class=\"form-control boxstyles\" name=\"regNo\" value=$regNo readonly/> </td>
+              <td > <input type=\"text\" style=\"text-align:center\" class=\"form-control boxstyles\" value=$name readonly/> </td>
+              <td > <input type=\"text\" style=\"text-align:center\" class=\"form-control boxstyles\" value=$age readonly/> </td>
+              <td > <input type=\"text\" style=\"text-align:center\" class=\"form-control boxstyles\" value=$gender readonly/> </td>
+              <td style=\"text-align:center\">  <input type=\"submit\" name=\"action\" value=\"View Patient History\" class='btn btn-outline-success'/>  </td>
             </form>
-            <br>
+            
             ";
     }
   }
     else{
-      echo "<p class =\"textStyle\">Selected diagnosis not available in any patients in the database</p> ";
+      echo "<br>";
+      echo "<h4 align = 'center' class =\"textStyle\">Selected diagnosis not available in any patients in the database</h4> ";
     
   }
 

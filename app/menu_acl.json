@@ -3,10 +3,7 @@
   "Register" : "register/register",
 
   
-  "New Patient" : "tools/AddNewPatient",
-    "Update Patient" : "tools/Update",
-    "Filter Patients":"tools/existingPatient",
-    "View Discharged Patients":"tools/dischargedPatient",
+  
     "Delete" : "tools/delete",
 
  

@@ -56,7 +56,7 @@ class Home extends Controller
       $this->view->render('home/index');
     }
 
-
+    
 
   //  $this->redirect('/home/abc/asas');
 

@@ -4,7 +4,7 @@
 
 
 
-<div class="landing">
+<!-- <div class="landing">
   <div class="home-wrap">
     <div  class="home-inner">
 
@@ -12,11 +12,11 @@
 
   </div>
 
-</div>
+</div> -->
 
 
-<div class="caption text-center">
-	<h1><?php if (currentUser()) {
+<div class="welcomeHeading text-center">
+	<h1 style="padding:20px"><?php if (currentUser()) {
     echo currentUser()->username;
   }else {
     echo "";

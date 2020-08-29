@@ -14,6 +14,7 @@
   font-size: 0.9rem;
   letter-spacing: 0.1rem;
   background-color:  #297578 !important;
+  margin-bottom:20px !important ;
   
 }
 
@@ -38,19 +39,32 @@ nav .navbar-nav li a{
   color:#FEA736;
 }
 
+
+.dropdown-item {
+
+  display: block;
+  width: 100%;
+  padding:5px;
+  clear: both;
+  font-weight: 500;
+  color: #297578 !important;
+  text-align: inherit;
+  white-space: normal;
+  background-color: transparent;
+  border: 0;
+}
+
 .loginContainer{
   padding:20px ;
   border-radius:20px;
-  /* width: 300px; */
   width: 300px;
-  height: 300px;
   background-color: white;
 }
 .textboxStyle{
   background-color: #FEA736;
-  opacity: 70%;
   color: #297578 ;
-  font-weight: bold;
+  border-radius: 6px;
+  /* font-weight: bold; */
 
 }
 /* input[type=text] , input[type=password] {
@@ -58,7 +72,7 @@ nav .navbar-nav li a{
 } */
 .remtext{
   color:#297578 ;
-  font-size: 18px;
+  /* font-size: 18px; */
   font-weight:600;
 }
 .btnlogin{
@@ -67,33 +81,25 @@ nav .navbar-nav li a{
   background-color: #297578 ;
   border-color: #297578 ;
   width: 250px;
+  
 }
 
 .biglogin{
   width: 400px;
   
 }
-/*--- Landing page ---*/
 
-.res-inner
-{
+/* welcom heading */
 
-  background-image: url(img/g1.gif) ;
-
+.welcomeHeading{
+  color: white;
+  font-weight: 600;
+  text-shadow: 5px black ;
 }
-
-
-.home-inner
-{
-
-  background-image: url(img/p1.png) ;
-
-}
-
 
 
 /*--- caption ---*/
-.caption{
+/* .caption{
 
   width: 100%;
   max-width: 100%;
@@ -122,7 +128,7 @@ nav .navbar-nav li a{
 
 .top{
   padding-top: 20px;
-}
+} */
 
 /* login box */
 
@@ -152,13 +158,13 @@ footer svg.svg-inline--fa{
 
 footer svg.svg-inline--fa:hover{
   color: #1ebba3!important;
-} */
+}  */
 
-/* hr.socket{
+ hr.socket{
   width: 100%;
   border-top: .2rem solid #666b71;
   margin-top: 3rem;
-} */
+}
 
 /*--- Media Queries ---*/
 @media (max-width: 767px){

@@ -32,13 +32,12 @@
   </head>
   <body class="mainbody">
 
-      <nav class="navbar navbar-expand-md navbarcustom ">
+      <nav class="navbar navbarcustom navbar-expand-md  ">
       <a class="navbar-brand" href="/Tuto/"><img src="/Tuto/css/hoslogo.png"></a>
 
 
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main_menu" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#main_menu" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon">
-      <i class="fas fa-bars" style="color:#FEA736; font-size:28px;"></i>
       </span>
     </button>
     <div class="navbar-header">

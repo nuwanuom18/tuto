@@ -17,8 +17,9 @@ if (!(isset($_SESSION))){
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="../../../js/jQuery-2.2.4.min.js"></script>
+    <script src="../../../bootstrap/js/bootstrap.min.js"></script>
     <link rel = "stylesheet" href = "../../../bootstrap/css/bootstrap.min.css" integrity="" crossorigin="anonymous">
-    <link rel = "stylesheet" href = "../../../img/test.css">
     <link rel = "stylesheet" href = "../../../style.css">
     <link rel = "stylesheet" href = "../../../css/styles.css">
 
@@ -34,7 +35,8 @@ if (!(isset($_SESSION))){
           if (mysqli_num_rows($records)!=0) {
             while($row = mysqli_fetch_array($records)){
               $lastRegNo = $row["RegNo"];
-              echo "Last used registration number: " .$lastRegNo;
+              echo"<br>";
+              echo "<span class ='textStyle'>Last used registration number: " .$lastRegNo."</span";
               echo '<br>';
             }
           }
@@ -124,19 +126,19 @@ if (!(isset($_SESSION))){
         <table class="table table-bordered" >
         <thead>
           <tr>
-              <th style="text-align:center" scope="col-3">Date</th>
-              <th style="text-align:center" scope="col-3">Presented Clinical Signs</th>
-              <th style="text-align:center" scope="col-3">Prescribed Medicine</th>
-              <th style="text-align:center" scope="col-3">Additional Notes</th>
+              <th style="text-align:center" scope="col-3" class="textStyle">Date</th>
+              <th style="text-align:center" scope="col-3" class="textStyle">Presented Clinical Signs</th>
+              <th style="text-align:center" scope="col-3" class="textStyle">Prescribed Medicine</th>
+              <th style="text-align:center" scope="col-3" class="textStyle">Additional Notes</th>
           </tr>
         </thead>
 
       <tbody>
         <tr>
-          <td> <input type="text" value="<?php echo date('Y-m-d');?>" readonly/> </td>
-          <td> <textarea id="signs" name = "signs" value='' rows="4" cols="30"></textarea></td>
-          <td> <textarea id="medicine" name = "medicine" value='' rows="4" cols="30"></textarea></td>
-          <td> <textarea id="notes" name = "notes" value='' rows="4" cols="30"></textarea></td>
+          <td> <input type="text" value="<?php echo date('Y-m-d');?>" readonly  class="boxstyles"/> </td>
+          <td> <textarea id="signs" name = "signs" value='' rows="4" cols="30" class="boxstyles"></textarea></td>
+          <td> <textarea id="medicine" name = "medicine" value='' rows="4" cols="30"  class="boxstyles"></textarea></td>
+          <td> <textarea id="notes" name = "notes" value='' rows="4" cols="30"  class="boxstyles"></textarea></td>
 
         </tr>
       </tbody>

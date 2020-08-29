@@ -25,19 +25,18 @@
             </div>
            
               <h2 align ="center"  class="attentionText">Attention! </h2>
-              <h6 align ="center" class="attentionText"> You are going to delete a member form the system</h6>
+              <h6 align ="center" class="attentionText"> You are going to delete a member from the system</h6>
               <br>
   
 
-              <div class=" form-group ">
-
+              <div align ="center" class=" form-group">
                 <input  name="password" id="password" type="password" placeholder = "Enter your password"class="form-control innercol" value=<?php echo $this->post['password'] ?> >
 
                 <!-- <div class="input-group-append">
                   <button class="btn btn-outline-secondary" type="submit">Submit</button>
                 </div> -->
               </div>
-              <div align ="center" class=" form-group ">
+              <div align ="center" class=" form-group  ">
               <button type="button" class="btn btn-outline-danger deletebtn">Submit</button>
 
               </div>

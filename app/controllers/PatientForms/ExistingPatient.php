@@ -18,6 +18,8 @@ if (!(isset($_SESSION))){
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="../../../js/jQuery-2.2.4.min.js"></script>
+    <script src="../../../bootstrap/js/bootstrap.min.js"></script>
     <link rel = "stylesheet" href = "../../../bootstrap/css/bootstrap.min.css" integrity="" crossorigin="anonymous">
     <link rel = "stylesheet" href = "../../../style.css">
     <link rel = "stylesheet" href = "../../../css/styles.css">
@@ -37,7 +39,7 @@ if (!(isset($_SESSION))){
                 {
                   $class_name = ucfirst($test);
                   $command = new $class_name;
-                  $command->execute($medical,array($_POST["regNo"], date('Y-m-d')));
+                  $command->execute($medical,array($_SESSION["regNo"], date('Y-m-d')));
                   //$medical->enterData($test, array('patient_id','sdate'), array($_SESSION["regNo"], date('Y-m-d')));
                 }
             }
@@ -58,6 +60,12 @@ if (!(isset($_SESSION))){
         if(isset($_POST['regNo'])){
           $regNo = $_POST["regNo"];
           $_SESSION["regNo"] = $_POST['regNo'];
+        }
+        else{
+          $regNo = $_SESSION["regNo"];
+        }
+
+
         $results =  $medical->retrieveData("patients", $columns, $regNo);
         if (mysqli_num_rows($results)!=0) {
           while($row = mysqli_fetch_array($results)){
@@ -83,9 +91,11 @@ if (!(isset($_SESSION))){
             //include '../../views/ExistingPatient/ExistingPatientForm.php';
           }
         }
-      }
+      
         else{
-          echo "Registration number not found.";
+          echo "<br> <br>";
+          echo "<h4 align ='center' class ='textStyle'>Registration number not found.</h4> ";
+          
         }
           ?>
           </div>

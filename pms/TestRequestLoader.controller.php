@@ -37,17 +37,21 @@ $_SESSION['requests']=$requests;
 //$_SESSION['database']=serialize($database);
 
 $iter_var=0;       //iterative variable inside the foreach loop to generate values for radio buttons
-echo "<form action='pms/LabReportLoader.controller.php' method='post'>";      // *****have to add action php file
+echo "<form action='pms/LabReportLoader.controller.php' method='post'>  ";  
+    // *****have to add action php file
 foreach($requests as $request){
     $id=$request->getPatientID();
     $date=$request->getDate();
+    
     echo "<input type='radio' name='test_request' value=$iter_var>";    // radio buttons indexed as integers
-    echo $date."\t \t".$id."<br>";
+    echo "<span class='labdatenidstyle'>  Date: </span><span class='labdatenidvaluestyle'>  $date   </span><span class='labdatenidstyle'>ID:</span><span class='labdatenidvaluestyle'> $id </span><br>";
     $iter_var+=1;
+
 }
 
+
 if(sizeof($requests)){
-    echo "<br><input type='submit' value='Add Submission'></form>";
+    echo "<br><input type='submit' value='Add Submission' class =' btn btnlogin' style='border-radius:10px ;'></form>";
 }
 else{
     echo "No requests currently available. Take a break :D";
